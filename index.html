@@ -59,10 +59,16 @@ nav.scrolled {
   box-shadow: 0 1px 0 rgba(212,134,26,0.2);
 }
 .nav-logo {
+  display: flex; align-items: center; gap: 0.6rem;
+  text-decoration: none; flex-shrink: 0;
+}
+.nav-logo img {
+  height: 36px; width: auto; display: block;
+}
+.nav-logo-text {
   font-family: 'Montserrat', sans-serif;
   font-size: 1rem; font-weight: 700;
   color: var(--sand); letter-spacing: 0.04em;
-  text-decoration: none;
 }
 .nav-links { display: flex; gap: 2rem; list-style: none; }
 .nav-links a {
@@ -567,6 +573,10 @@ footer {
   border-top: 1px solid rgba(212,134,26,0.15);
 }
 .footer-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; }
+.footer-brand-logo {
+  height: 44px; width: auto; display: block;
+  margin-bottom: 0.75rem;
+}
 .footer-brand-name {
   font-family: 'Montserrat', sans-serif;
   font-size: 1.1rem; font-weight: 700; color: var(--sand); margin-bottom: 0.25rem;
@@ -714,7 +724,10 @@ footer { position: relative; overflow: hidden; }
 
 <!-- NAV -->
 <nav id="navbar">
-  <a class="nav-logo" href="#">Patliputra Samvad</a>
+  <a class="nav-logo" href="#">
+    <img src="logo.png" alt="Patliputra Samvad" onerror="this.style.display='none'">
+    <span class="nav-logo-text">Patliputra Samvad</span>
+  </a>
   <ul class="nav-links">
     <li><a href="#why">About</a></li>
     <li><a href="#what">Programme</a></li>
@@ -1290,6 +1303,7 @@ footer { position: relative; overflow: hidden; }
   </div>
   <div class="footer-grid">
     <div>
+      <img src="logo.png" alt="Patliputra Samvad" class="footer-brand-logo" onerror="this.style.display='none'">
       <div class="footer-brand-name">Patliputra Samvad</div>
       <div class="footer-brand-hi display-hi">पाटलिपुत्र संवाद</div>
       <div class="footer-brand-desc">Roots to Enterprise. Understanding Our Soil. Building Our Future. An initiative by Turiya Prakalpa.</div>
