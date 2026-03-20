@@ -191,7 +191,8 @@ nav.scrolled {
 .btn-ghost:hover { border-color: var(--gold); color: var(--gold); }
 
 .hero-partners {
-  margin-top: 3.5rem;
+  margin-top: 1rem;
+  margin-bottom: 4rem;
   animation: fadeUp .8s .5s ease both;
 }
 .hero-partners p {
@@ -202,6 +203,31 @@ nav.scrolled {
   display: flex; gap: 2rem; align-items: center;
   justify-content: center; flex-wrap: wrap;
 }
+.hero-partner-cols {
+  display: flex; align-items: flex-start; gap: 2.5rem;
+  justify-content: center;
+}
+.hero-partner-col {
+  display: flex; flex-direction: column; align-items: center; gap: 0.6rem;
+}
+.hero-partner-col-divider {
+  width: 1px; height: 48px; margin-top: 4px;
+  background: rgba(245,239,224,0.1);
+}
+.partner-group-label {
+  font-size: 0.62rem; font-weight: 500;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  color: rgba(245,239,224,0.3);
+}
+.partner-divider {
+  color: rgba(245,239,224,0.15);
+  font-size: 0.8rem;
+}
+.partner-divider {
+  color: rgba(245,239,224,0.15);
+  font-size: 0.8rem;
+}
+
 .partner-logo-pill {
   font-size: 0.75rem; font-weight: 500;
   letter-spacing: 0.06em; text-transform: uppercase;
@@ -214,14 +240,26 @@ nav.scrolled {
   position: absolute; bottom: 2rem; left: 50%;
   transform: translateX(-50%);
   display: flex; flex-direction: column; align-items: center;
-  gap: 0.5rem; color: rgba(245,239,224,0.3);
-  font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase;
   animation: fadeUp .8s .6s ease both;
 }
-.scroll-arrow {
-  width: 1px; height: 40px;
-  background: linear-gradient(180deg, rgba(212,134,26,0.5), transparent);
-  animation: scrollPulse 2s ease-in-out infinite;
+.scroll-mouse {
+  width: 24px; height: 38px;
+  border: 1.5px solid rgba(245,239,224,0.2);
+  border-radius: 12px;
+  display: flex; justify-content: center;
+  padding-top: 6px;
+}
+.scroll-wheel {
+  width: 3px; height: 7px;
+  background: var(--gold);
+  border-radius: 2px;
+  animation: scrollWheel 1.8s ease-in-out infinite;
+}
+@keyframes scrollWheel {
+  0% { opacity: 1; transform: translateY(0); }
+  60% { opacity: 0; transform: translateY(10px); }
+  61% { opacity: 0; transform: translateY(0); }
+  100% { opacity: 1; transform: translateY(0); }
 }
 
 /* ── SECTIONS SHARED ── */
@@ -806,7 +844,7 @@ footer { position: relative; overflow: hidden; }
   <div class="hero-tag">Second Edition · 2026</div>
   <div class="hero-hindi display-hi">पाटलिपुत्र संवाद</div>
   <h1 class="hero-title">
-    Bihar's future will not<br>be built in <em>abstraction.</em>
+    Bihar's future will not be built in <em>abstraction.</em>
   </h1>
   <p class="hero-sub">It will emerge from understanding our roots and transforming them into enterprise.</p>
   <div class="hero-divider"></div>
@@ -818,16 +856,27 @@ footer { position: relative; overflow: hidden; }
     <a href="#what" class="btn-ghost">Explore the Programme</a>
   </div>
   <div class="hero-partners">
-    <p>An initiative by</p>
-    <div class="hero-partner-logos">
-      <span class="partner-logo-pill">Turiya Prakalpa</span>
-      <span class="partner-logo-pill">Mandaar</span>
-      <span class="partner-logo-pill">Savera · IIT Delhi</span>
+    <div class="hero-partner-cols">
+      <div class="hero-partner-col">
+        <span class="partner-group-label">An initiative by</span>
+        <div class="hero-partner-logos">
+          <a href="https://turiyaprakalpa.com/" target="_blank" class="partner-logo-pill">Turiya Prakalpa</a>
+        </div>
+      </div>
+      <div class="hero-partner-col-divider"></div>
+      <div class="hero-partner-col">
+        <span class="partner-group-label">Collaborators</span>
+        <div class="hero-partner-logos">
+          <a href="https://mandaar.org/" target="_blank" class="partner-logo-pill">Mandaar</a>
+          <a href="https://www.linkedin.com/company/gram-savera/about/" target="_blank" class="partner-logo-pill">Savera · IIT Delhi</a>
+        </div>
+      </div>
     </div>
   </div>
   <div class="hero-scroll">
-    <div class="scroll-arrow"></div>
-    <span>Scroll</span>
+    <div class="scroll-mouse">
+      <div class="scroll-wheel"></div>
+    </div>
   </div>
 </section>
 
@@ -847,6 +896,7 @@ footer { position: relative; overflow: hidden; }
         <p>Patliputra Samvad is that revival. A platform where Bihar's roots become the foundation for its future — where understanding your soil is the first act of building enterprise.</p>
       </div>
       <div class="why-visual reveal">
+        <div style="font-size:0.65rem; font-weight:600; letter-spacing:0.18em; text-transform:uppercase; color:var(--bronze); margin-bottom:1.25rem;">From Stone to Infinity: The Evolution of Identity</div>
         <div class="origin-step">
           <div class="origin-num">I</div>
           <div>
@@ -1318,10 +1368,10 @@ footer { position: relative; overflow: hidden; }
 
       <div class="org-card main">
         <div class="org-logo-placeholder">
-          Turiya Prakalpa<br>Logo
+          <img src="Turiya-logo.svg" alt="Turiya Prakalpa" style="max-height:100%; max-width:100%; object-fit:contain;">
         </div>
         <div>
-          <div class="org-badge">Main Organiser</div>
+          <div class="org-badge">Organiser</div>
           <div class="org-name">Turiya Prakalpa</div>
           <div class="org-tagline">Holistic youth empowerment through structured dialogue and community</div>
           <div class="org-desc">Turiya Prakalpa is an ecosystem-building initiative dedicated to holistic youth empowerment — integrating personal growth, professional development, and civic responsibility through structured platforms, workshops, and mentorship networks. Through initiatives like Patliputra Samvad, Turiya Prakalpa aims to nurture a generation of confident, rooted, and capable young leaders who understand their communities and are equipped to build sustainable futures.</div>
@@ -1330,7 +1380,7 @@ footer { position: relative; overflow: hidden; }
 
       <div class="org-card">
         <div class="org-logo-placeholder" style="aspect-ratio:3/1; margin-bottom:1rem;">
-          Mandaar Logo
+        <img src="mandaar-logo.png" alt="Mandaar" style="max-height:100%; max-width:100%; object-fit:contain;">
         </div>
         <div class="org-badge">Co-Partner</div>
         <div class="org-name">Mandaar</div>
@@ -1339,7 +1389,7 @@ footer { position: relative; overflow: hidden; }
 
       <div class="org-card">
         <div class="org-logo-placeholder" style="aspect-ratio:3/1; margin-bottom:1rem;">
-          Savera IIT Delhi Logo
+          <img src="Savera-logo.jpg" alt="Savera IIT Delhi" style="max-height:100%; max-width:100%; object-fit:contain;">
         </div>
         <div class="org-badge">Co-Partner</div>
         <div class="org-name">Savera — IIT Delhi</div>
