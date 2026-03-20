@@ -645,7 +645,17 @@ section { padding: clamp(4rem, 8vw, 7rem) clamp(1.5rem, 5vw, 4rem); }
   aspect-ratio: 1; font-size: 0.75rem; color: var(--bronze);
   text-align: center; padding: 1rem; font-style: italic;
 }
-
+.bihar-ribbon {
+  border-bottom: 1px dotted rgba(245,239,224,0.2);
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  opacity: 0.4;
+  background-image: url('Bihar-Ribbon.svg');
+  background-repeat: repeat-x;
+  background-size: auto 60px;
+  height: 60px;
+  width: 100%;
+}
 /* ── FOOTER ── */
 footer {
   background: var(--charcoal);
@@ -802,6 +812,8 @@ footer { position: relative; overflow: hidden; }
   .footer-grid { grid-template-columns: 1fr; }
 }
 </style>
+<script defer src="/_vercel/insights/script.js"></script>
+<script defer src="/_vercel/speed-insights/script.js"></script>
 </head>
 <body>
 
@@ -1400,6 +1412,7 @@ footer { position: relative; overflow: hidden; }
   </div>
 </section>
 
+
 <!-- FOOTER -->
 <footer>
   <!-- Motif band: repeating icons in a flex row across top of footer -->
@@ -1458,6 +1471,7 @@ footer { position: relative; overflow: hidden; }
     <span>© 2025 Patliputra Samvad. An initiative by Turiya Prakalpa.</span>
     <span>patliputrasamvad.com</span>
   </div>
+  <div class="bihar-ribbon" aria-hidden="true"></div>
 </footer>
 
 <script>
