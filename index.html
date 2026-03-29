@@ -330,6 +330,24 @@ section { padding: clamp(4rem, 8vw, 7rem) clamp(1.5rem, 5vw, 4rem); }
 .why-visual {
   display: flex; flex-direction: column; gap: 1.5rem;
 }
+.why-video {
+  width: 100%;
+  aspect-ratio: 16/9;
+  border-radius: 2px;
+  overflow: hidden;
+  margin-bottom: 1.25rem;
+}
+.why-video iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+.origin-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
 .origin-step {
   display: flex; align-items: flex-start; gap: 1rem;
   padding: 1.25rem;
@@ -929,33 +947,39 @@ footer { position: relative; overflow: hidden; }
       </div>
       <div class="why-visual reveal">
         <div style="font-size:0.65rem; font-weight:600; letter-spacing:0.18em; text-transform:uppercase; color:var(--bronze); margin-bottom:1.25rem;">From Stone to Infinity: The Evolution of Identity</div>
+        <div class="why-video">
+          <iframe src="https://www.youtube.com/embed/H7GhTKfBa_U?si=1eUPmiHj5Hzi8oI4" title="Patliputra Samvad" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div class="origin-grid">
+        <div class="origin-step">
         <div class="origin-step">
           <div class="origin-num">I</div>
           <div>
             <div class="origin-label">The Pataliputra Capital</div>
-            <div class="origin-desc">The flame-palmette carved in Mauryan stone — an ancient symbol of life, rising knowledge, and energy from deep roots. Our logo begins here.</div>
+            <div class="origin-desc">The flame-palmette in Mauryan stone — ancient symbol of life and rising knowledge. Our logo begins here.</div>
           </div>
         </div>
         <div class="origin-step">
           <div class="origin-num">II</div>
           <div>
             <div class="origin-label">The Solar Crown</div>
-            <div class="origin-desc">The spreading form echoes Chhath Puja — Bihar's most sacred tradition and its reverence for the sun as the eternal source of life and renewal.</div>
+            <div class="origin-desc">Echoes Chhath Puja — Bihar's reverence for the sun as the eternal source of life and renewal.</div>
           </div>
         </div>
         <div class="origin-step">
           <div class="origin-num">III</div>
           <div>
             <div class="origin-label">The Infinity of Samvad</div>
-            <div class="origin-desc">At the base, an infinity symbol. Conversation is not an event — it is a continuous process. Eternal knowledge. Unbroken civilizational flow.</div>
+            <div class="origin-desc">Conversation is not an event — it is continuous. Eternal knowledge. Unbroken civilizational flow.</div>
           </div>
         </div>
         <div class="origin-step">
           <div class="origin-num">IV</div>
           <div>
             <div class="origin-label">Past → Present → Future</div>
-            <div class="origin-desc">The second edition moves from dialogue to participation. Bihar's youth are no longer the audience — they are the architects.</div>
+            <div class="origin-desc">From dialogue to participation. Bihar's youth are no longer the audience — they are the architects.</div>
           </div>
+        </div>
         </div>
       </div>
     </div>
