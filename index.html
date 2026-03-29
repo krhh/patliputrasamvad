@@ -329,8 +329,13 @@ section { padding: clamp(4rem, 8vw, 7rem) clamp(1.5rem, 5vw, 4rem); }
 }
 .why-visual {
   display: flex; flex-direction: column; gap: 1.5rem;
+  padding-top: 0.25rem;
+}
+.why-visual .section-tag {
+  margin-top: 0.6rem;
 }
 .why-video {
+  max-height: 280px;
   width: 100%;
   aspect-ratio: 16/9;
   border-radius: 2px;
@@ -349,6 +354,7 @@ section { padding: clamp(4rem, 8vw, 7rem) clamp(1.5rem, 5vw, 4rem); }
   gap: 1rem;
 }
 .origin-step {
+  align-self: stretch;
   display: flex; align-items: flex-start; gap: 1rem;
   padding: 1.25rem;
   background: var(--white);
@@ -950,8 +956,6 @@ footer { position: relative; overflow: hidden; }
         <div class="why-video">
           <iframe src="https://www.youtube.com/embed/H7GhTKfBa_U?si=1eUPmiHj5Hzi8oI4" title="Patliputra Samvad" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
-        <div class="origin-grid">
-        <div class="origin-step">
         <div class="origin-step">
           <div class="origin-num">I</div>
           <div>
@@ -977,7 +981,7 @@ footer { position: relative; overflow: hidden; }
           <div class="origin-num">IV</div>
           <div>
             <div class="origin-label">Past → Present → Future</div>
-            <div class="origin-desc">From dialogue to participation. Bihar's youth are no longer the audience — they are the architects.</div>
+            <div class="origin-desc">The second edition moves from dialogue to participation. Bihar's youth are no longer the audience — they are the architects.</div>
           </div>
         </div>
         </div>
